@@ -26,9 +26,10 @@ class MySpider(scrapy.Spider):
             "https://www.domainetat.tn/?cat=25&lang=fr",
             "https://www.domainetat.tn/?cat=15&lang=fr&paged=2",
             "https://www.domainetat.tn/?cat=15&lang=fr",
+
             "https://www.domainetat.tn/?page_id=26&lang=fr"             
             ]
-        
+
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
     def parse(self, response):
