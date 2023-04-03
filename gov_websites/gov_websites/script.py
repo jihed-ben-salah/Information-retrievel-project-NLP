@@ -6,7 +6,7 @@ from transformers import pipeline
 import json
 from transformers import AutoTokenizer, CamembertForQuestionAnswering
 
-with open('/home/rima/scraping/gov_websites/gov_websites/spiders/context.json', 'r') as f:
+with open('/home/rima/esprit2023-nlu-DataMachines/gov_websites/gov_websites/spiders/context.json', 'r') as f:
     data = json.load(f)
 
 corpus=[]
@@ -19,7 +19,7 @@ for i in range(len(data)):
 
 
 # Define the question
-question = "DEFNAT a été accrédité pour quel but?"
+question = input('Give your question here: ') 
 
 
 from stop_words import get_stop_words
