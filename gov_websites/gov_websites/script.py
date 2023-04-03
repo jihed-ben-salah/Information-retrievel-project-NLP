@@ -44,11 +44,6 @@ print("Meilleur contexte pour la question '{}': '{}'".format(question, best_doc)
 
 nlp = pipeline("question-answering", model="deepset/roberta-base-squad2", tokenizer="deepset/roberta-base-squad2")
 
-tokenizer = AutoTokenizer.from_pretrained("deepset/roberta-base-squad2")
-model = CamembertForQuestionAnswering.from_pretrained("deepset/roberta-base-squad2")
 
-inputs = tokenizer(question,best_doc, return_tensors="pt")
-with torch.no_grad():
-    outputs = model(**inputs)
 result = nlp(question=question, context=best_doc)
 print("\nRéponse: ",result)
