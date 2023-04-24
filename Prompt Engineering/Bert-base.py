@@ -26,6 +26,7 @@ training_args = TrainingArguments(
     weight_decay=0.01,
     push_to_hub=False,
     logging_steps=500,
+    
   
     load_best_model_at_end=False,  # Set to False
     metric_for_best_model='accuracy',
@@ -75,7 +76,8 @@ for prp in prompts:
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
-        device='cuda'
+    
+   
     )
 
     # Train the model
