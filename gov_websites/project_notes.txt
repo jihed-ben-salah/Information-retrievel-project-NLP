@@ -1,0 +1,9 @@
+
+Question-Question Similarity:
+
+
+- Start new EPIC in JIRA
+- Find and list relevant pretrained models and datasets.
+- Pre-trained (quora) model for duplicate question classification
+- Finetune on existing paraphrase or question entailment datasets
+- Use generative AI for the task
